@@ -1,8 +1,6 @@
 # StreamedChaos
 Live streaming website
 
-Co-authored-by: Jade Ferguson <jadesnider2440@gmail.com>
-
 ## Requirements
 - Runs on ASP.NET Core MVC targeting .NET 6
 - Database will use SQL Server
