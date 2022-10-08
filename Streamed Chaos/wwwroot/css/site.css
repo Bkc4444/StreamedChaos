@@ -19,11 +19,6 @@ h1{
     color:azure;
 }
 
-body {
-
-    background-image: url('/Pictures/Death Stranding.jpg')
-}
-
 #wrapper {
     min-height: 100%;
     margin-bottom: -75px;
