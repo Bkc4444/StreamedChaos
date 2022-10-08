@@ -7,12 +7,28 @@ html {
     font-size: 16px;
   }
 }
+html, body {
+    height: 100%;
+}
 
 html {
   position: relative;
   min-height: 100%;
 }
+h1{
+    color:azure;
+}
 
 body {
-  margin-bottom: 60px;
+
+    background-image: url('/Pictures/Death Stranding.jpg')
+}
+
+#wrapper {
+    min-height: 100%;
+    margin-bottom: -75px;
+}
+
+#seperator, #footer {
+    height: 75px;
 }
