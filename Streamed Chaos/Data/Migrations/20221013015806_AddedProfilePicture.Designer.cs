@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Streamed_Chaos.Data;
 
@@ -11,9 +12,10 @@ using Streamed_Chaos.Data;
 namespace Streamed_Chaos.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20221013015806_AddedProfilePicture")]
+    partial class AddedProfilePicture
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -236,8 +238,7 @@ namespace Streamed_Chaos.Data.Migrations
 
                     b.Property<string>("ProfilePicture")
                         .IsRequired()
-                        .HasMaxLength(75)
-                        .HasColumnType("nvarchar(75)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasDiscriminator().HasValue("ApplicationUser");
                 });
