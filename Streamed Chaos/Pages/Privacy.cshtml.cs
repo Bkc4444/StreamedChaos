@@ -12,11 +12,9 @@ namespace Streamed_Chaos.Pages
             _logger = logger;
         }
 
-        public List<string> ShowNames => new List<string>();
 
         public void OnGet()
         {
-            ShowNames.Add("hello");
         }
     }
 }
