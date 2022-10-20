@@ -21,7 +21,11 @@ h1{
 
 body {
 
-    background-image: url('/Pictures/Death Stranding.jpg')
+    /*
+        Set the background pic here
+        background-image: url('/Pictures/Death Stranding.jpg')
+
+    */
 }
 
 #wrapper {
