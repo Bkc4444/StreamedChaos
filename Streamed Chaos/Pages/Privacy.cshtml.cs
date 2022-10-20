@@ -12,6 +12,7 @@ namespace Streamed_Chaos.Pages
             _logger = logger;
         }
 
+
         public void OnGet()
         {
         }
