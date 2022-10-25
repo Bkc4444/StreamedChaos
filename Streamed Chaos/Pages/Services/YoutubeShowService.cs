@@ -16,7 +16,7 @@ using Google.Apis.YouTube.v3;
 using Google.Apis.YouTube.v3.Data;
 using Microsoft.Extensions.Configuration;
 using Newtonsoft.Json;
-
+using Streamed_Chaos.Models;
 
 namespace Streamed_Chaos.Pages.Services
 {
@@ -25,7 +25,7 @@ namespace Streamed_Chaos.Pages.Services
     /// Relies on the Google APIs Client Library for .NET, v1.7.0 or higher.
     /// See https://developers.google.com/api-client-library/dotnet/get_started
     /// </summary>
-    public class YouTubeShowsService : IYouTubeShowsService
+    public class YouTubeShowsService : IYoutubeShowsService
     {
         readonly string YouTubeKey;
         readonly string YouTubeAppName;
