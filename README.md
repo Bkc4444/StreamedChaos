@@ -18,5 +18,5 @@ The website brings in content creators and viewers
 - As a Content Creator, I want to be able to ave the freedom to make appropriate content for people who enjoy the same things that I do and can hopefully put a smile to someones face in the process
 
 ## Useful Links
-[Youtube API](https://developers.google.com/youtube/v3/getting-started)
-[Nuget to add in Package Manager for Youtube API](https://www.nuget.org/packages/Google.Apis.YouTube.v3)
+- [Youtube API](https://developers.google.com/youtube/v3/getting-started)
+- [Nuget to add in Package Manager for Youtube API](https://www.nuget.org/packages/Google.Apis.YouTube.v3)
