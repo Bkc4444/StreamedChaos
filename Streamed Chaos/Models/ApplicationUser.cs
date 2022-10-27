@@ -7,9 +7,8 @@ namespace Streamed_Chaos.Models
     {
         // This is creating a column
         //[CustomProfilePicture]
-        [PersonalData]
-        [StringLength(75)]
-        public string ProfilePicture { get; set; } = null!;
+        //[PersonalData]
+        public string ImagePath { get; set; }
     }
 
     public class CustomProfilePicture : ValidationAttribute
