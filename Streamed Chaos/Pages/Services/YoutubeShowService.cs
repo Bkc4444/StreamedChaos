@@ -18,6 +18,8 @@ using Microsoft.Extensions.Configuration;
 using Newtonsoft.Json;
 using Streamed_Chaos.Models;
 
+// Followed tutorial from James Montemagno
+
 namespace Streamed_Chaos.Pages.Services
 {
     /// <summary>
