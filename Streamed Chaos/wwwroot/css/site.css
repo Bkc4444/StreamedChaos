@@ -36,3 +36,7 @@ body {
 #seperator, #footer {
     height: 75px;
 }
+
+#registerSubmit {
+    margin-top: 70px;
+}
