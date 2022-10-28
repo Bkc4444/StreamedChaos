@@ -20,3 +20,4 @@ The website brings in content creators and viewers
 ## Useful Links
 - [Youtube API](https://developers.google.com/youtube/v3/getting-started)
 - [Nuget to add in Package Manager for Youtube API](https://www.nuget.org/packages/Google.Apis.YouTube.v3)
+- [Nuget to add in Pakage Manager for Humanizer](https://www.nuget.org/packages/Humanizer/)
