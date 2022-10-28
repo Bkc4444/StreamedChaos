@@ -2,7 +2,7 @@
 
 namespace Streamed_Chaos.Pages.Services
 {
-    public class IYoutubeShowsService
+    public interface IYouTubeShowsService
     {
         Task<IEnumerable<Show>> GetShows(int numberOfShows = 25);
     }
