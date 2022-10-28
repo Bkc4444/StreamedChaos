@@ -21,3 +21,8 @@ The website brings in content creators and viewers
 - [Youtube API](https://developers.google.com/youtube/v3/getting-started)
 - [Nuget to add in Package Manager for Youtube API](https://www.nuget.org/packages/Google.Apis.YouTube.v3)
 - [Nuget to add in Pakage Manager for Humanizer](https://www.nuget.org/packages/Humanizer/)
+- [Nuget to add in Pakacge Manager for Runtime Compliation](https://www.nuget.org/packages/Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation)
+
+## Resources
+- This is the tutorial we followed to set up Youtube Integration and code neeeded to run it
+  - [Tutorial follwed](https://www.youtube.com/watch?v=Sghb6GlpN64&list=PLwOF5UVsZWUiQFJ1mE-Ka3iIWXOWmxZXN&index=6&t=2111s)
