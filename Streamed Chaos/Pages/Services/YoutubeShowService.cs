@@ -27,14 +27,14 @@ namespace Streamed_Chaos.Pages.Services
     /// Relies on the Google APIs Client Library for .NET, v1.7.0 or higher.
     /// See https://developers.google.com/api-client-library/dotnet/get_started
     /// </summary>
-    public class YouTubeShowsService : IYoutubeShowsService
+    public class YouTubeShowService : IYouTubeShowsService
     {
         readonly string YouTubeKey;
         readonly string YouTubeAppName;
         readonly string YouTubePlaylistId;
         readonly string DefaultThumbnail;
 
-        public YouTubeShowsService()
+        public YouTubeShowService()
         {
             YouTubeKey = GetConfig(nameof(YouTubeKey));
             YouTubeAppName = GetConfig(nameof(YouTubeAppName));
@@ -44,7 +44,7 @@ namespace Streamed_Chaos.Pages.Services
 
         private string GetConfig(string name)
         {
-            return System.Environment.GetEnvironmentVariable(name, EnvironmentVariableTarget.Process);
+            return Environment.GetEnvironmentVariable(name, EnvironmentVariableTarget.Process);
         }
 
         /// <summary>
@@ -66,7 +66,7 @@ namespace Streamed_Chaos.Pages.Services
 
             foreach (var show in shows)
             {
-                var liveData = videos.FirstOrDefault(v => v.Id == show.Id)?.LiveStreamingDetails;
+                var liveData = videos.FirstOrDefault(v => v.Id == show.Id.ToString())?.LiveStreamingDetails;
                 if (liveData == null)
                     continue;
 
@@ -81,6 +81,8 @@ namespace Streamed_Chaos.Pages.Services
             }
         }
 
+
+        // Can make it so we have pagination down the road and have more on page than 25
         public async Task<IEnumerable<Show>> GetShows(int numberOfShows = 25)
         {
             var youtubeService = new YouTubeService(new BaseClientService.Initializer()
@@ -95,7 +97,6 @@ namespace Streamed_Chaos.Pages.Services
             var request = youtubeService.PlaylistItems.List("snippet,status");
             request.PlaylistId = YouTubePlaylistId;
             request.MaxResults = numberOfShows;
-            //playlistItemsListRequest.PageToken = nextPageToken;
 
             // Retrieve the list of videos uploaded to the authenticated user's channel.
             var response = await request.ExecuteAsync();
