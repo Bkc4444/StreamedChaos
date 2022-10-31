@@ -116,7 +116,7 @@ namespace Streamed_Chaos.Pages.Services
                 item.Snippet != null)
                 .Select(item => new Show
                 {
-                    Id = item.Snippet.ResourceId.VideoId,
+                    Id = Convert.ToInt32(item.Snippet.ResourceId.VideoId),
                     Title = item.Snippet.Title,
                     Description = item.Snippet.Description,
                     ThumbnailUrl = item.Snippet.Thumbnails?.Medium?.Url ?? item.Snippet.Thumbnails?.Standard?.Url ?? DefaultThumbnail,
@@ -127,7 +127,7 @@ namespace Streamed_Chaos.Pages.Services
 
             foreach (var item in items)
             {
-                item.SetCalculateShowFields();
+                item.SetCalculateShowFields(); //make (put breakpoint to see if has response back)
             }
 
             return items;

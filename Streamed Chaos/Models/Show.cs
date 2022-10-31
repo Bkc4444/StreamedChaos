@@ -8,17 +8,17 @@ namespace Streamed_Chaos.Models
     public class Show
     {
         public int Id { get; set; }
-        public string Title { get; set; }
+        public string? Title { get; set; }
 
-        public string Topic { get; set; }
+        public string? Topic { get; set; }
 
         public bool HasDisplayTitle { get; set; }
 
         public int DisplayTitle { get; set; }
 
-        public string CommunityLinksUrl { get; set; }
+        public string? CommunityLinksUrl { get; set; }
 
-        public string Description { get; set; }
+        public string? Description { get; set; }
 
         public DateTime? ScheduledStartTime {get; set;}
 
@@ -28,11 +28,11 @@ namespace Streamed_Chaos.Models
 
         public bool HasLinks { get; set; }
 
-        public string Url { get; set; }
+        public string? Url { get; set; }
 
-        public string ThumbnailUrl { get; set; }
+        public string? ThumbnailUrl { get; set; }
 
-        public string Category { get; set; }
+        public string? Category { get; set; }
 
 
         // Humanizer is used in .NET to manipulate and display strings, enums, dates, times, timespans
