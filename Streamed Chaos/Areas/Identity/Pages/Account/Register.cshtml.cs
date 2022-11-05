@@ -123,7 +123,7 @@ namespace Streamed_Chaos.Areas.Identity.Pages.Account
             if (ModelState.IsValid)
             {
                 _unitOfWork.UploadImage(file);
-                ApplicationUser user = new ApplicationUser { UserName = Input.Email, Email = Input.Email, ImagePath = file.FileName};
+                ApplicationUser user = new ApplicationUser { UserName = Input.Username, Email = Input.Email, ImagePath = file.FileName};
 
                 // Changed to Username and not email so we can use username instead of email
                 await _userStore.SetUserNameAsync(user, Input.Username, CancellationToken.None);
