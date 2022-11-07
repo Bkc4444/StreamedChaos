@@ -3,11 +3,14 @@ using Microsoft.EntityFrameworkCore;
 using Streamed_Chaos.Data;
 using Streamed_Chaos.Infrastructure;
 using Streamed_Chaos.Models;
+using Streamed_Chaos.Pages.Services;
 using Streamed_Chaos.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+builder.Services.AddScoped<IYouTubeShowsService, YouTubeShowService>();
+
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseSqlServer(connectionString));
