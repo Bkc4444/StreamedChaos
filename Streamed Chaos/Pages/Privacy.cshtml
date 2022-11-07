@@ -9,7 +9,7 @@
     <div class="next-episode text-center">
         @if (Model.IsOnAir)
         {
-            <h2>@Model.OnAirShow.Category Live Standup</h2>
+            <h2>@Model.OnAirShow.Category Streamed Chaos</h2>
 
             @if (Model.OnAirShow.HasDisplayTitle)
             {
@@ -56,7 +56,7 @@
                  data-utc-min="@startTime.Minute">
 
 
-                <h2>Next @Model.UpcomingShow.Category Live Standup</h2>
+                <h2>Next @Model.UpcomingShow.Category Streamed Chaos</h2>
 
                 @if (Model.UpcomingShow.HasDisplayTitle)
                 {
@@ -77,13 +77,12 @@
 
             <hr>
 
-            <p>Check back here to watch &amp; ask questions then!</p>
+            <p>Check back here to watch &amp; and hang out</p>
         }
         else
         {
-            <h2>Streaming Live Every Tuesday &amp; Thursday</h2>
-            <p>Alternating between 10:00 AM and 3:45 PM Pacific Time, week to week.</p>
-            <p>Check back here to watch &amp; ask questions then!</p>
+            <h2>No Live streams for today</h2>
+            <p>Check back here to watch &amp; ask hang out then!</p>
         }
     </div>
 </div>
@@ -151,7 +150,7 @@
     <br />
     <div class="row">
         <div class="col-md-12 text-center">
-            <a href="@Model.MoreShowsUrl" class="btn btn-primary">See More Episodes</a>
+            <a href="@Model.MoreShowsUrl" class="btn btn-primary">See More Streams</a>
         </div>
     </div>
     <br />
