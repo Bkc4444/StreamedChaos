@@ -29,22 +29,19 @@ namespace Streamed_Chaos.Pages.Services
     /// </summary>
     public class YouTubeShowService : IYouTubeShowsService
     {
+        private readonly IConfiguration _config;
         readonly string YouTubeKey;
         readonly string YouTubeAppName;
         readonly string YouTubePlaylistId;
         readonly string DefaultThumbnail;
 
-        public YouTubeShowService()
+        public YouTubeShowService(IConfiguration config)
         {
-            YouTubeKey = GetConfig(nameof(YouTubeKey));
-            YouTubeAppName = GetConfig(nameof(YouTubeAppName));
-            YouTubePlaylistId = GetConfig(nameof(YouTubePlaylistId));
-            DefaultThumbnail = GetConfig(nameof(DefaultThumbnail));
-        }
-
-        private string GetConfig(string name)
-        {
-            return Environment.GetEnvironmentVariable(name, EnvironmentVariableTarget.Process);
+            YouTubeKey = config["Youtube:YoutubeKey"];
+            YouTubeAppName = config["Youtube:AppName"];
+            YouTubePlaylistId = config["Youtube:YoutubePlaylistId"];
+            DefaultThumbnail = ""/*GetConfig(nameof(DefaultThumbnail))*/;
+            _config = config;
         }
 
         /// <summary>

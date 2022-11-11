@@ -8,7 +8,8 @@ namespace Streamed_Chaos.Pages
 {
     public class PrivacyModel : PageModel
     {
-        public IEnumerable<Show>? Shows { get; private set; }
+        // This is making a to say if there is no pages to show it will already be an empty list of shows 
+        public IEnumerable<Show> Shows { get; private set; } = new List<Show>();
         public Show? UpcomingShow { get; private set; }
         public Show? OnAirShow { get; private set; }
         public bool HasUpcomingShow => UpcomingShow != null;
@@ -18,7 +19,7 @@ namespace Streamed_Chaos.Pages
         IYouTubeShowsService youTubeService;
         private readonly ILogger<PrivacyModel> _logger;
 
-        public PrivacyModel(YouTubeShowService youTubeService, ILogger<PrivacyModel> logger)
+        public PrivacyModel(IYouTubeShowsService youTubeService, ILogger<PrivacyModel> logger)
         {
             this.youTubeService = youTubeService;
             _logger = logger;
