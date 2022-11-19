@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Google.Apis.YouTube.v3.Data;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Extensions.Logging;
 using Streamed_Chaos.Models;
@@ -14,7 +15,24 @@ namespace Streamed_Chaos.Pages
         public Show? OnAirShow { get; private set; }
         public bool HasUpcomingShow => UpcomingShow != null;
         public bool IsOnAir => OnAirShow != null;
-        public string? MoreShowsUrl => "https://www.youtube.com/playlist?list=PL1rZQsJPBU2St9-Mz1Kaa7rofciyrwWVx";
+        // This portion we want to have an array of different
+        // playlists and randomize them each time the page starts up
+        // or is refreshed
+        public string? MoreShowsUrl => showPlaylists();
+
+        public string? showPlaylists()
+        {
+            var randomGenerator = new Random();
+            string[] playlist = new string[] { //"https://youtube.com/playlist?list=PLPG6lSd4nJ_t8B2y83YRRKFXUYX6cl3fc",
+                                      //"https://youtube.com/playlist?list=PLYH8WvNV1YElPneq3cmmexAdmQf2pnICT",
+                                      "https://youtube.com/playlist?list=PL3tRBEVW0hiBSFOFhTC5wt75P2BES0rAo",
+                                      //"https://youtube.com/playlist?list=PLJtitKU0CAehsdcybehbPFHObmWsKtQcY",
+                                      //"https://youtube.com/playlist?list=PLRsapyZqDs1o2_cfJNIxQzb-X1-mpYbdA"
+                                      };
+
+            string showPlaylists = playlist[randomGenerator.Next(playlist.Length)];
+            return showPlaylists;
+        }
 
         IYouTubeShowsService youTubeService;
         private readonly ILogger<PrivacyModel> _logger;

@@ -40,6 +40,7 @@ namespace Streamed_Chaos.Pages.Services
             YouTubeKey = config["Youtube:YoutubeKey"];
             YouTubeAppName = config["Youtube:AppName"];
             YouTubePlaylistId = config["Youtube:YoutubePlaylistId"];
+                                 // 
             DefaultThumbnail = ""/*GetConfig(nameof(DefaultThumbnail))*/;
             _config = config;
         }
