@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Extensions.Logging;
 using Streamed_Chaos.Models;
 using Streamed_Chaos.Pages.Services;
+using static System.Net.WebRequestMethods;
 
 namespace Streamed_Chaos.Pages
 {
@@ -23,12 +24,14 @@ namespace Streamed_Chaos.Pages
         public string? showPlaylists()
         {
             var randomGenerator = new Random();
-            string[] playlist = new string[] { //"https://youtube.com/playlist?list=PLPG6lSd4nJ_t8B2y83YRRKFXUYX6cl3fc",
-                                      //"https://youtube.com/playlist?list=PLYH8WvNV1YElPneq3cmmexAdmQf2pnICT",
-                                      "https://youtube.com/playlist?list=PL3tRBEVW0hiBSFOFhTC5wt75P2BES0rAo",
-                                      //"https://youtube.com/playlist?list=PLJtitKU0CAehsdcybehbPFHObmWsKtQcY",
-                                      //"https://youtube.com/playlist?list=PLRsapyZqDs1o2_cfJNIxQzb-X1-mpYbdA"
-                                      };
+            string[] playlist = new string[] {
+                                      "https://youtube.com/playlist?list=PLYH8WvNV1YElPneq3cmmexAdmQf2pnICT", //Pewdipie
+                                      "https://youtube.com/playlist?list=PL3tRBEVW0hiBSFOFhTC5wt75P2BES0rAo", // Markiplier
+                                      "https://youtube.com/playlist?list=PLJtitKU0CAehsdcybehbPFHObmWsKtQcY", // Adam Savage Tested
+                                      "https://youtube.com/playlist?list=PLRsapyZqDs1o2_cfJNIxQzb-X1-mpYbdA", // Doug Meruno
+                                      "https://www.youtube.com/playlist?list=PLrZ2zKOtC_-C4rWfapgngoe9o2-ng8ZBr", // Product Design Online
+                                      "https://www.youtube.com/playlist?list=PLUUk3Kbfv-_q1SKE776edGIYaAhkrKLu2" // SKS Props
+            };
 
             string showPlaylists = playlist[randomGenerator.Next(playlist.Length)];
             return showPlaylists;
