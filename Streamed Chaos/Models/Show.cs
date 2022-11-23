@@ -7,14 +7,14 @@ namespace Streamed_Chaos.Models
 {
     public class Show
     {
-        public int Id { get; set; }
+        public string? Id { get; set; }
         public string? Title { get; set; }
 
         public string? Topic { get; set; }
 
         public bool HasDisplayTitle { get; set; }
 
-        public int DisplayTitle { get; set; }
+        public string? DisplayTitle { get; set; }
 
         public string? CommunityLinksUrl { get; set; }
 
