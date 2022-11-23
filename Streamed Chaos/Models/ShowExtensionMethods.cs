@@ -16,7 +16,7 @@ namespace Streamed_Chaos.Models
                 item.Topic = pieces.Last().Trim();
 
             item.CommunityLinksUrl = GetCommunityLinksUrl(item.Description);
-            item.DisplayTitle = Convert.ToInt32(string.IsNullOrEmpty(item.Topic) ? item.Title : item.Topic);
+            item.DisplayTitle = (string.IsNullOrEmpty(item.Topic) ? item.Title : item.Topic);
             item.HasDisplayTitle = !string.IsNullOrEmpty(item.DisplayTitle.ToString());
             item.HasLinks = !string.IsNullOrWhiteSpace(item.CommunityLinksUrl);
             item.Category = GetCategory(item.Title);

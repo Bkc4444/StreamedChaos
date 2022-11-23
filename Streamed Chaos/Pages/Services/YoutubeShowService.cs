@@ -40,7 +40,6 @@ namespace Streamed_Chaos.Pages.Services
             YouTubeKey = config["Youtube:YoutubeKey"];
             YouTubeAppName = config["Youtube:AppName"];
             YouTubePlaylistId = config["Youtube:YoutubePlaylistId"];
-                                 // 
             DefaultThumbnail = ""/*GetConfig(nameof(DefaultThumbnail))*/;
             _config = config;
         }
@@ -114,7 +113,7 @@ namespace Streamed_Chaos.Pages.Services
                 item.Snippet != null)
                 .Select(item => new Show
                 {
-                    Id = Convert.ToInt32(item.Snippet.ResourceId.VideoId),
+                    Id = (item.Snippet.ResourceId.VideoId).ToString(),
                     Title = item.Snippet.Title,
                     Description = item.Snippet.Description,
                     ThumbnailUrl = item.Snippet.Thumbnails?.Medium?.Url ?? item.Snippet.Thumbnails?.Standard?.Url ?? DefaultThumbnail,
