@@ -1,9 +1,28 @@
 ﻿@page
-@model IndexModel
-@{
-    ViewData["Title"] = "Home page";
-}
+@model Streamed_Chaos.Pages.IndexModel
 
-<div class="text-center">
-    <h1 class="display-4">Streamed Chaos</h1>
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+<div class="container">
+    <div class="row">
+        @foreach (var item in Model.UserPlaylist)
+        {
+            <div class="col-md-3 m-3">
+                <div class="card" style="width: 18rem;">
+                    <div class="card-body">
+                        <h5 class="card-title">@item.ChannelName</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">Channel Id: @item.ChannelId</h6>
+                        <p class="card-text">Playlist Id: @item.PlaylistId</p>
+                        <p class="card-text">Playlist Link: @item.PlaylistLink</p>
+                        <p>
+                            <a asp-page="./Edit" asp-route-id="@item.Id">Edit</a> |
+                            <a asp-page="./Details" asp-route-id="@item.Id">Details</a> |
+                            <a asp-page="./Delete" asp-route-id="@item.Id">Delete</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
 </div>
