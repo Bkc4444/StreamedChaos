@@ -1,8 +1,19 @@
 ﻿@page
 @model Streamed_Chaos.Pages.IndexModel
 
+<div>
+    <h4>
+        User Instructions
+    </h4>
+    <p>
+        The Channel Id can be found using this <a href="https://commentpicker.com/youtube-channel-id.php">website</a> and inserting the link according to their
+        instructions. The Playlist Id is the letters and numbers following list= in the playlist link.
+    </p>
+</div>
+
+
 <p>
-    <a asp-page="Create">Create New</a>
+    <a class="btn btn-primary" asp-page="Create">New Youtube Channel</a>
 </p>
 <div class="container">
     <div class="row">
@@ -16,9 +27,9 @@
                         <p class="card-text">Playlist Id: @item.PlaylistId</p>
                         <p class="card-text">Playlist Link: @item.PlaylistLink</p>
                         <p>
-                            <a asp-page="./Edit" asp-route-id="@item.Id">Edit</a> |
-                            <a asp-page="./Details" asp-route-id="@item.Id">Details</a> |
-                            <a asp-page="./Delete" asp-route-id="@item.Id">Delete</a>
+                            <a class="btn btn-primary" asp-page="./Edit" asp-route-id="@item.Id">Edit</a> |
+                            <a class="btn btn-info" asp-page="./Details" asp-route-id="@item.Id">Details</a> |
+                            <a class="btn btn-danger" asp-page="./Delete" asp-route-id="@item.Id">Delete</a>
                         </p>
                     </div>
                 </div>
