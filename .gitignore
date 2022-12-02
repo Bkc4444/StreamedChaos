@@ -361,3 +361,4 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
+/Streamed Chaos/Properties/ServiceDependencies/StreamedChaos - Zip Deploy/profile.arm.json
