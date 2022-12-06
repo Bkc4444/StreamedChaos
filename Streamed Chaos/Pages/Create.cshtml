@@ -1,31 +1,31 @@
 ﻿@page
 @model Streamed_Chaos.Pages.CreateModel
 
-<h4>UserPlaylist</h4>
+<h4>Playlist to Add</h4>
 <hr />
 <div class="row">
     <div class="col-md-4">
         <form method="post">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
-                <label asp-for="UserPlaylist.PlaylistLink" class="control-label"></label>
-                <input asp-for="UserPlaylist.PlaylistLink" class="form-control" />
-                <span asp-validation-for="UserPlaylist.PlaylistLink" class="text-danger"></span>
+                <label asp-for="UserPlaylist.ChannelName" class="control-label">Channel Name</label>
+                <input asp-for="UserPlaylist.ChannelName" class="form-control" />
+                <span asp-validation-for="UserPlaylist.ChannelName" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="UserPlaylist.PlaylistId" class="control-label"></label>
-                <input asp-for="UserPlaylist.PlaylistId" class="form-control" />
-                <span asp-validation-for="UserPlaylist.PlaylistId" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="UserPlaylist.ChannelId" class="control-label"></label>
+                <label asp-for="UserPlaylist.ChannelId" class="control-label">Channel Id</label>
                 <input asp-for="UserPlaylist.ChannelId" class="form-control" />
                 <span asp-validation-for="UserPlaylist.ChannelId" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="UserPlaylist.ChannelName" class="control-label"></label>
-                <input asp-for="UserPlaylist.ChannelName" class="form-control" />
-                <span asp-validation-for="UserPlaylist.ChannelName" class="text-danger"></span>
+                <label asp-for="UserPlaylist.PlaylistId" class="control-label">Playlist Id</label>
+                <input asp-for="UserPlaylist.PlaylistId" class="form-control" />
+                <span asp-validation-for="UserPlaylist.PlaylistId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="UserPlaylist.PlaylistLink" class="control-label">Playlist Link</label>
+                <input asp-for="UserPlaylist.PlaylistLink" class="form-control" />
+                <span asp-validation-for="UserPlaylist.PlaylistLink" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <input type="submit" value="Create" class="btn btn-primary" />
@@ -35,7 +35,7 @@
 </div>
 
 <div>
-    <a asp-page="Index">Back to List</a>
+    <a class="btn btn-primary" asp-page="Index">Back to List</a>
 </div>
 
 @section Scripts {
