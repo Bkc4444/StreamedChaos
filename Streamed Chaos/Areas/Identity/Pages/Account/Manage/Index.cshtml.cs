@@ -25,7 +25,9 @@ namespace Streamed_Chaos.Areas.Identity.Pages.Account.Manage
             _userManager = userManager;
             _signInManager = signInManager;
         }
-
+        /// <summary>
+        /// Shows the profile picture
+        /// </summary>
         public string ImagePath { get; set; }
 
         /// <summary>

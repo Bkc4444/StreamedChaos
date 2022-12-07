@@ -11,11 +11,13 @@ namespace Streamed_Chaos.Models
         public string ImagePath { get; set; }
     }
 
+    /// <summary>
+    /// Setting up the profile picture
+    /// </summary>
     public class CustomProfilePicture : ValidationAttribute
     {
         protected override ValidationResult? IsValid(object? value, ValidationContext validationContext)
         {
-            // Custom logic goes here
             throw new NotImplementedException();
         }
     }

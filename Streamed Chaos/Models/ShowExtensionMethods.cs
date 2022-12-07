@@ -22,6 +22,11 @@ namespace Streamed_Chaos.Models
             item.Category = GetCategory(item.Title);
         }
 
+        /// <summary>
+        /// Checks the name of the category
+        /// </summary>
+        /// <param name="title"></param>
+        /// <returns>The name of the category</returns>
         private static string GetCategory(string title)
         {
             if (string.IsNullOrWhiteSpace(title))

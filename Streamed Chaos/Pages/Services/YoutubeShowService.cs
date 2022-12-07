@@ -104,7 +104,9 @@ namespace Streamed_Chaos.Pages.Services
 
             return shows.OrderByDescending(s => s.ScheduledStartTime);
         }
-
+        /// <summary>
+        /// Sets the format into JSON so that it can be read 
+        /// </summary>
         internal List<Show> PlaylistItemsToShows(PlaylistItemListResponse response)
         {
             var items = response.Items
@@ -130,6 +132,9 @@ namespace Streamed_Chaos.Pages.Services
             return items;
         }
 
+        /// <summary>
+        /// Gets the video url and encrypts it so that it can be read through the api
+        /// </summary>
         public static string GetVideoUrl(string id, string playlistId, long itemIndex)
         {
             var encodedId = UrlEncoder.Default.Encode(id);

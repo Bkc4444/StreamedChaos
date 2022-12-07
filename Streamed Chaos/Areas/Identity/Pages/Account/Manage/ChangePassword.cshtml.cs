@@ -78,6 +78,9 @@ namespace Streamed_Chaos.Areas.Identity.Pages.Account.Manage
             public string ConfirmPassword { get; set; }
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
         public async Task<IActionResult> OnGetAsync()
         {
             var user = await _userManager.GetUserAsync(User);

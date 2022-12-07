@@ -5,6 +5,9 @@ using Streamed_Chaos.Pages.Services;
 
 namespace Streamed_Chaos.Data
 {
+    /// <summary>
+    /// This is how you add specific things to the database
+    /// </summary>
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)

@@ -75,6 +75,9 @@ namespace Streamed_Chaos.Areas.Identity.Pages.Account
         /// </summary>
         public class InputModel
         {
+            /// <summary>
+            /// Put in a picture for your profile
+            /// </summary>
             public string ImagePath { get; set; }
 
             /// <summary>

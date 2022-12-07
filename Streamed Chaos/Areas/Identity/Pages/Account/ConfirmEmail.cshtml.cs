@@ -30,6 +30,10 @@ namespace Streamed_Chaos.Areas.Identity.Pages.Account
         /// </summary>
         [TempData]
         public string StatusMessage { get; set; }
+
+        /// <summary>
+        /// Checking the confirmation of the email
+        /// </summary>
         public async Task<IActionResult> OnGetAsync(string userId, string code)
         {
             if (userId == null || code == null)

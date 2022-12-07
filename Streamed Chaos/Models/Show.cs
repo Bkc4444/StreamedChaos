@@ -7,31 +7,70 @@ namespace Streamed_Chaos.Models
 {
     public class Show
     {
+        /// <summary>
+        /// The Id of the show
+        /// </summary>
         public string? Id { get; set; }
+
+        /// <summary>
+        /// Title of the show
+        /// </summary>
         public string? Title { get; set; }
 
+        /// <summary>
+        /// What the show will focus on
+        /// </summary>
         public string? Topic { get; set; }
+
 
         public bool HasDisplayTitle { get; set; }
 
+        /// <summary>
+        /// Shows the title of the stream
+        /// </summary>
         public string? DisplayTitle { get; set; }
 
+        /// <summary>
+        /// 
+        /// </summary>
         public string? CommunityLinksUrl { get; set; }
-
+        /// <summary>
+        /// Description of the stream
+        /// </summary>
         public string? Description { get; set; }
 
+        /// <summary>
+        /// What time th show says it will start
+        /// </summary>
         public DateTime? ScheduledStartTime {get; set;}
-
+        /// <summary>
+        /// What time the show actually starts at
+        /// </summary>
         public DateTime? ActualStartTime {get; set;}
 
+        /// <summary>
+        /// What time the show actually ends at
+        /// </summary>
         public DateTime? ActualEndTime { get; set;}
 
+        /// <summary>
+        /// Links to other shows
+        /// </summary>
         public bool HasLinks { get; set; }
-
+        
+        /// <summary>
+        /// The url for the show
+        /// </summary>
         public string? Url { get; set; }
 
+        /// <summary>
+        /// The thumbnail of the show
+        /// </summary>
         public string? ThumbnailUrl { get; set; }
 
+        /// <summary>
+        /// What the show is categorized as
+        /// </summary>
         public string? Category { get; set; }
 
 
@@ -81,6 +120,9 @@ namespace Streamed_Chaos.Models
             }
         }
 
+        /// <summary>
+        /// Checks to see when content creators are set to go live
+        /// </summary>
         public static bool CheckHasStarted(DateTime dateTimeNow, DateTime scheduled)
         {
             return dateTimeNow > scheduled.AddMinutes(-5) && dateTimeNow < scheduled.AddHours(2);
