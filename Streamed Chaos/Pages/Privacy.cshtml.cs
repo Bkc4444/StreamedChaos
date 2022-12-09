@@ -40,7 +40,7 @@ namespace Streamed_Chaos.Pages
             _logger = logger;
         }
 
-        /*public async void OnGet()
+        public async void OnGet()
         {
 
             var randomGenerator = new Random();
@@ -72,9 +72,9 @@ namespace Streamed_Chaos.Pages
             Shows = await youTubeService.GetShows();
             UpcomingShow = Shows.LastOrDefault(show => show.IsInFuture && !show.IsOnAir);
             OnAirShow = Shows.FirstOrDefault(show => show.IsOnAir);
-            }*/
+            }
 
-            public async void OnGet() //Modify this to input the datasbe bdata to populate the view data
+            /*public async void OnGet() //Modify this to input the datasbe bdata to populate the view data
             {
 
             var randomGenerator = new Random();
@@ -114,7 +114,7 @@ namespace Streamed_Chaos.Pages
 
             cn.Open();
             cmd.ExecuteNonQuery();
-            cn.Close();
+            cn.Close();*/
         }
     }
 }
